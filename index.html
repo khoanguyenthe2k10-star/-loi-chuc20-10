@@ -19,21 +19,22 @@
   }
 
   .message {
-    font-size: 2.3rem;
-    background: linear-gradient(90deg, #ff66cc, #ff99ff, #ff66cc);
+    font-size: 2.8rem; /* chữ to hơn */
+    background: linear-gradient(90deg, #ff99cc, #ff66cc, #ff99ff);
     -webkit-background-clip: text;
     color: transparent;
     white-space: nowrap;
     text-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
-    animation: moveText 20s linear infinite;
+    animation: moveText 25s linear infinite;
   }
 
+  /* Chữ chạy từ phải sang trái */
   @keyframes moveText {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
   }
 
-  /* Ẩn video */
+  /* Ẩn video YouTube */
   iframe {
     position: absolute;
     width: 0;
@@ -43,9 +44,9 @@
 </style>
 </head>
 <body>
-  <!-- Nhạc nền tự động phát -->
+  <!-- Nhạc nền (YouTube ẩn, tự động phát) -->
   <iframe 
-    src="https://www.youtube.com/embed/f-VsoLm4i5c?autoplay=1&loop=1&playlist=f-VsoLm4i5c" 
+    src="https://www.youtube.com/embed/f-VsoLm4i5c?autoplay=1&loop=1&playlist=f-VsoLm4i5c"
     allow="autoplay">
   </iframe>
 
