@@ -11,51 +11,57 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(https://raw.githubusercontent.com/username/repo/main/tenfile.jpg);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+  }
+
+  /* Nền ảnh mờ kính */
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://raw.githubusercontent.com/khoanguyenthe2k10-star/-loi-chuc20-10/refs/heads/main/l%E1%BB%9Bp%20QM.jfif');
     background-size: cover;
     background-position: center;
-    overflow: hidden;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    filter: blur(8px);
+    transform: scale(1.1);
+    z-index: -1;
   }
 
   .message {
-    font-size: 4rem; /* chữ to hơn */
-    background: linear-gradient(90deg, #ff99cc, #ff66cc, #ff99ff);
+    font-size: 5rem;
+    background: linear-gradient(90deg, #ff99ff, #ff66cc, #ff99ff);
     -webkit-background-clip: text;
     color: transparent;
     white-space: nowrap;
-    text-shadow: 0 0 15px rgba(255, 182, 193, 0.9);
-    animation: moveText 25s linear infinite;
+    text-shadow: 0 0 25px rgba(255, 0, 150, 0.8);
+    animation: moveText 40s linear infinite;
+    font-weight: 600;
   }
 
-  /* Chữ chạy từ phải sang trái */
   @keyframes moveText {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
   }
 
-  /* Ẩn video YouTube */
-  iframe {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: none;
-  }
+  audio { display: none; }
 </style>
 </head>
 <body>
-  <!-- Nhạc nền (YouTube ẩn, tự động phát) -->
- <iframe 
-  src="https://www.youtube.com/embed/f-VsoLm4i5c?autoplay=1&loop=1&playlist=f-VsoLm4i5c" 
-  allow="autoplay" 
-  style="display:none">
-</iframe>
-  <!-- Lời chúc -->
+
+  <!-- Nhạc Google Drive MP3 -->
+  <audio autoplay loop>
+    <source src="https://docs.google.com/uc?export=download&id=148_Eh4MGn3v-nRMsSOjf_ROKuk0OSOt2" type="audio/mpeg">
+  </audio>
+
   <div class="message">
     💗 Chào cô chúa ở trước màn hình >< chúng tớ mang đến cho cậu bất ngờ nèeee.
     Hôm nay là ngày đặc biệt đối với cậu, dù món quà không được to nhưng đó là sự chân thành của chúng tớ,
     mong cậu sẽ vui vẻ và đón nhận nhaaaa. Chúc cậu 20/10 vui vẻ, xinh ngày càng xinh,
     học ngày càng giỏi, mạnh khoẻ để đồng hành với bọn tớ nhaaa 💗
   </div>
+
 </body>
 </html>
+
